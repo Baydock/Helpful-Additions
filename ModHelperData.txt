@@ -1,0 +1,8 @@
+﻿WorksOnVersion = "36.0";
+Name = "Helpful Additions";
+Version = "3.1.0";
+Author = "Baydock";
+Description = "A mod for BloonsTD6 that adds various quality of life changes.";
+RepoName = "Helpful-Additions";
+RepoOwner = "Baydock";
+SquareIcon = true;

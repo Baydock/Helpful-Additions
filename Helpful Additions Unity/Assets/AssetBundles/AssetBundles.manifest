@@ -1,0 +1,11 @@
+ManifestFileVersion: 0
+CRC: 2772794692
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: bloons
+      Dependencies: {}
+    Info_1:
+      Name: uiprefabs
+      Dependencies:
+        Dependency_0: bloons

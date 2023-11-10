@@ -1,0 +1,82 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>HelpfulAdditions</RootNamespace>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <Platforms>x64</Platforms>
+    <DebugType>embedded</DebugType>
+    <Version>3.1.0</Version>
+    <Authors>Baydock</Authors>
+    <PackageId>HelpfulAdditions</PackageId>
+    <AssemblyName>HelpfulAdditions</AssemblyName>
+  </PropertyGroup>
+
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Copy SourceFiles="$(TargetPath)" DestinationFolder="..\..\..\..\..\..\Games\steam\steamapps\common\BloonsTD6\Mods" />
+		<Message Importance="high" Text="Copied $(TargetFileName) -&gt; BloonsTD6\Mods" />
+	</Target>
+
+  <ItemGroup>
+	  <EmbeddedResource Include="../ModHelperData.txt" Link="Resources\ModHelperData.txt" />
+	  <EmbeddedResource Include="../Icon.png" Link="Resources\Icon.png" />
+	  <EmbeddedResource Include="Resources\bloons" />
+	  <EmbeddedResource Include="Resources\uiprefabs" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="MonoBehaviors\" />
+		<Compile Include="..\Helpful Additions Unity\Assets\Scripts\RoundInfo.cs" Link="MonoBehaviors\RoundInfo.cs" />
+		<Compile Include="..\Helpful Additions Unity\Assets\Scripts\RoundInfoPanel.cs" Link="MonoBehaviors\RoundInfoPanel.cs" />
+		<Compile Include="..\Helpful Additions Unity\Assets\Scripts\RoundSetPicker.cs" Link="MonoBehaviors\RoundSetPicker.cs" />
+		<Compile Include="..\Helpful Additions Unity\Assets\Scripts\RoundButtons.cs" Link="MonoBehaviors\RoundButtons.cs" />
+		<Compile Include="..\Helpful Additions Unity\Assets\Scripts\BloonMenuButtonsBox.cs" Link="MonoBehaviors\BloonMenuButtonsBox.cs" />
+		<Compile Include="..\Helpful Additions Unity\Assets\Scripts\SettingsButton.cs" Link="MonoBehaviors\SettingsButton.cs" />
+		<Compile Include="..\Helpful Additions Unity\Assets\Scripts\SettingToggle.cs" Link="MonoBehaviors\SettingToggle.cs" />
+		<Compile Include="..\Helpful Additions Unity\Assets\Scripts\HASettings.cs" Link="MonoBehaviors\HASettings.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="0Harmony">
+	    <HintPath>..\..\..\..\..\..\Games\steam\steamapps\common\BloonsTD6\MelonLoader\net6\0Harmony.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Assembly-CSharp">
+	    <HintPath>..\..\..\..\..\..\Games\steam\steamapps\common\BloonsTD6\MelonLoader\Il2CppAssemblies\Assembly-CSharp.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Il2CppInterop.Runtime">
+	    <HintPath>..\..\..\..\..\..\Games\steam\steamapps\common\BloonsTD6\MelonLoader\net6\Il2CppInterop.Runtime.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Il2Cppmscorlib">
+	    <HintPath>..\..\..\..\..\..\Games\steam\steamapps\common\BloonsTD6\MelonLoader\Il2CppAssemblies\Il2Cppmscorlib.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Il2CppNinjaKiwi.Common">
+	    <HintPath>..\..\..\..\..\..\Games\steam\steamapps\common\BloonsTD6\MelonLoader\Il2CppAssemblies\Il2CppNinjaKiwi.Common.dll</HintPath>
+	  </Reference>
+	  <Reference Include="MelonLoader">
+	    <HintPath>..\..\..\..\..\..\Games\steam\steamapps\common\BloonsTD6\MelonLoader\net6\MelonLoader.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Unity.TextMeshPro">
+	    <HintPath>..\..\..\..\..\..\Games\steam\steamapps\common\BloonsTD6\MelonLoader\Il2CppAssemblies\Unity.TextMeshPro.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine.AnimationModule">
+	    <HintPath>..\..\..\..\..\..\Games\steam\steamapps\common\BloonsTD6\MelonLoader\Il2CppAssemblies\UnityEngine.AnimationModule.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine.AssetBundleModule">
+	    <HintPath>..\..\..\..\..\..\Games\steam\steamapps\common\BloonsTD6\MelonLoader\Il2CppAssemblies\UnityEngine.AssetBundleModule.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine.CoreModule">
+	    <HintPath>..\..\..\..\..\..\Games\steam\steamapps\common\BloonsTD6\MelonLoader\Il2CppAssemblies\UnityEngine.CoreModule.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine.ImageConversionModule">
+	    <HintPath>..\..\..\..\..\..\Games\steam\steamapps\common\BloonsTD6\MelonLoader\Il2CppAssemblies\UnityEngine.ImageConversionModule.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine.UI">
+	    <HintPath>..\..\..\..\..\..\Games\steam\steamapps\common\BloonsTD6\MelonLoader\Il2CppAssemblies\UnityEngine.UI.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine.UIModule">
+	    <HintPath>..\..\..\..\..\..\Games\steam\steamapps\common\BloonsTD6\MelonLoader\Il2CppAssemblies\UnityEngine.UIModule.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+</Project>

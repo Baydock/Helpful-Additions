@@ -1,0 +1,13 @@
+
+**/.vs/
+**/bin/
+**/obj/
+**/Temp/
+**/Logs/
+**/Library/
+**/UserSettings/
+Helpful Additions Unity/**.csproj
+Helpful Additions Unity/**.sln
+Helpful Additions Unity/UpgradeLog.htm
+Helpful Additions Unity/Assets/TextMesh Pro/
+Helpful Additions Unity/Assets/TextMesh Pro.meta
