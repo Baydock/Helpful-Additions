@@ -2,7 +2,7 @@
 using HelpfulAdditions.Properties;
 using MelonLoader;
 
-[assembly: MelonInfo(typeof(HelpfulAdditions.Mod), "Helpful Additions", "3.1.0", "Baydock")]
+[assembly: MelonInfo(typeof(HelpfulAdditions.Mod), "Helpful Additions", "3.1.1", "Baydock")]
 [assembly: MelonGame("Ninja Kiwi", "BloonsTD6")]
 [assembly: MelonColor(255, 200, 162, 200)]
 [assembly: MelonAuthorColor(255, 255, 104, 0)]
